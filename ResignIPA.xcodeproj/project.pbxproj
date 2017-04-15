@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E0CBDDC1EA2685D00B3FF16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC41EA2685D00B3FF16 /* AppDelegate.m */; };
+		8E0CBDDD1EA2685D00B3FF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC51EA2685D00B3FF16 /* Assets.xcassets */; };
+		8E0CBDDE1EA2685D00B3FF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC61EA2685D00B3FF16 /* Main.storyboard */; };
+		8E0CBDDF1EA2685D00B3FF16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC81EA2685D00B3FF16 /* InfoPlist.strings */; };
+		8E0CBDE11EA2685D00B3FF16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDCC1EA2685D00B3FF16 /* Info.plist */; };
+		8E0CBDE21EA2685D00B3FF16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDCD1EA2685D00B3FF16 /* main.m */; };
+		8E0CBDE31EA2685D00B3FF16 /* ResignManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDD01EA2685D00B3FF16 /* ResignManager.m */; };
+		8E0CBDE41EA2685D00B3FF16 /* AppInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDD31EA2685D00B3FF16 /* AppInfoItem.m */; };
+		8E0CBDE51EA2685D00B3FF16 /* CertificateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDD51EA2685D00B3FF16 /* CertificateItem.m */; };
+		8E0CBDE61EA2685D00B3FF16 /* ProvisioningProfileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDD71EA2685D00B3FF16 /* ProvisioningProfileItem.m */; };
+		8E0CBDE71EA2685D00B3FF16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDD91EA2685D00B3FF16 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8E0CBDC31EA2685D00B3FF16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E0CBDC41EA2685D00B3FF16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E0CBDC51EA2685D00B3FF16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E0CBDC71EA2685D00B3FF16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E0CBDC91EA2685D00B3FF16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E0CBDCC1EA2685D00B3FF16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E0CBDCD1EA2685D00B3FF16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E0CBDCF1EA2685D00B3FF16 /* ResignManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResignManager.h; sourceTree = "<group>"; };
+		8E0CBDD01EA2685D00B3FF16 /* ResignManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResignManager.m; sourceTree = "<group>"; };
+		8E0CBDD21EA2685D00B3FF16 /* AppInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoItem.h; sourceTree = "<group>"; };
+		8E0CBDD31EA2685D00B3FF16 /* AppInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoItem.m; sourceTree = "<group>"; };
+		8E0CBDD41EA2685D00B3FF16 /* CertificateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateItem.h; sourceTree = "<group>"; };
+		8E0CBDD51EA2685D00B3FF16 /* CertificateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateItem.m; sourceTree = "<group>"; };
+		8E0CBDD61EA2685D00B3FF16 /* ProvisioningProfileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvisioningProfileItem.h; sourceTree = "<group>"; };
+		8E0CBDD71EA2685D00B3FF16 /* ProvisioningProfileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvisioningProfileItem.m; sourceTree = "<group>"; };
+		8E0CBDD81EA2685D00B3FF16 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E0CBDD91EA2685D00B3FF16 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E0CBDDA1EA2685D00B3FF16 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8E29CB361E9F148F006D411C /* ResignIPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResignIPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E29CB331E9F148F006D411C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E0CBDC21EA2685D00B3FF16 /* ResignIPA */ = {
+			isa = PBXGroup;
+			children = (
+				8E0CBDCE1EA2685D00B3FF16 /* Manager */,
+				8E0CBDD11EA2685D00B3FF16 /* Model */,
+				8E0CBDC31EA2685D00B3FF16 /* AppDelegate.h */,
+				8E0CBDC41EA2685D00B3FF16 /* AppDelegate.m */,
+				8E0CBDD81EA2685D00B3FF16 /* ViewController.h */,
+				8E0CBDD91EA2685D00B3FF16 /* ViewController.m */,
+				8E0CBDC51EA2685D00B3FF16 /* Assets.xcassets */,
+				8E0CBDC61EA2685D00B3FF16 /* Main.storyboard */,
+				8E0CBDE81EA2686C00B3FF16 /* Supporting Files */,
+			);
+			path = ResignIPA;
+			sourceTree = "<group>";
+		};
+		8E0CBDCE1EA2685D00B3FF16 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8E0CBDCF1EA2685D00B3FF16 /* ResignManager.h */,
+				8E0CBDD01EA2685D00B3FF16 /* ResignManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8E0CBDD11EA2685D00B3FF16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E0CBDD21EA2685D00B3FF16 /* AppInfoItem.h */,
+				8E0CBDD31EA2685D00B3FF16 /* AppInfoItem.m */,
+				8E0CBDD41EA2685D00B3FF16 /* CertificateItem.h */,
+				8E0CBDD51EA2685D00B3FF16 /* CertificateItem.m */,
+				8E0CBDD61EA2685D00B3FF16 /* ProvisioningProfileItem.h */,
+				8E0CBDD71EA2685D00B3FF16 /* ProvisioningProfileItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E0CBDE81EA2686C00B3FF16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E0CBDCD1EA2685D00B3FF16 /* main.m */,
+				8E0CBDCC1EA2685D00B3FF16 /* Info.plist */,
+				8E0CBDC81EA2685D00B3FF16 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E29CB2D1E9F148F006D411C = {
+			isa = PBXGroup;
+			children = (
+				8E0CBDC21EA2685D00B3FF16 /* ResignIPA */,
+				8E29CB371E9F148F006D411C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E29CB371E9F148F006D411C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E29CB361E9F148F006D411C /* ResignIPA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E29CB351E9F148F006D411C /* ResignIPA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E29CB4A1E9F148F006D411C /* Build configuration list for PBXNativeTarget "ResignIPA" */;
+			buildPhases = (
+				8E29CB321E9F148F006D411C /* Sources */,
+				8E29CB331E9F148F006D411C /* Frameworks */,
+				8E29CB341E9F148F006D411C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ResignIPA;
+			productName = "Resign IPA";
+			productReference = 8E29CB361E9F148F006D411C /* ResignIPA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E29CB2E1E9F148F006D411C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = wyong.developer;
+				TargetAttributes = {
+					8E29CB351E9F148F006D411C = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 8MKVW4UJK2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 8E29CB311E9F148F006D411C /* Build configuration list for PBXProject "ResignIPA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 8E29CB2D1E9F148F006D411C;
+			productRefGroup = 8E29CB371E9F148F006D411C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E29CB351E9F148F006D411C /* ResignIPA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E29CB341E9F148F006D411C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E0CBDDD1EA2685D00B3FF16 /* Assets.xcassets in Resources */,
+				8E0CBDDF1EA2685D00B3FF16 /* InfoPlist.strings in Resources */,
+				8E0CBDE11EA2685D00B3FF16 /* Info.plist in Resources */,
+				8E0CBDDE1EA2685D00B3FF16 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E29CB321E9F148F006D411C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E0CBDE71EA2685D00B3FF16 /* ViewController.m in Sources */,
+				8E0CBDE41EA2685D00B3FF16 /* AppInfoItem.m in Sources */,
+				8E0CBDE21EA2685D00B3FF16 /* main.m in Sources */,
+				8E0CBDE51EA2685D00B3FF16 /* CertificateItem.m in Sources */,
+				8E0CBDE31EA2685D00B3FF16 /* ResignManager.m in Sources */,
+				8E0CBDDC1EA2685D00B3FF16 /* AppDelegate.m in Sources */,
+				8E0CBDE61EA2685D00B3FF16 /* ProvisioningProfileItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8E0CBDC61EA2685D00B3FF16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E0CBDC71EA2685D00B3FF16 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E0CBDC81EA2685D00B3FF16 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E0CBDC91EA2685D00B3FF16 /* en */,
+				8E0CBDDA1EA2685D00B3FF16 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E29CB481E9F148F006D411C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8E29CB491E9F148F006D411C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8E29CB4B1E9F148F006D411C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8MKVW4UJK2;
+				INFOPLIST_FILE = "$(SRCROOT)/ResignIPA/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangyong.Resign-IPA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8E29CB4C1E9F148F006D411C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8MKVW4UJK2;
+				INFOPLIST_FILE = "$(SRCROOT)/ResignIPA/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangyong.Resign-IPA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E29CB311E9F148F006D411C /* Build configuration list for PBXProject "ResignIPA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E29CB481E9F148F006D411C /* Debug */,
+				8E29CB491E9F148F006D411C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E29CB4A1E9F148F006D411C /* Build configuration list for PBXNativeTarget "ResignIPA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E29CB4B1E9F148F006D411C /* Debug */,
+				8E29CB4C1E9F148F006D411C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E29CB2E1E9F148F006D411C /* Project object */;
+}

@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Resign IPA
+
+  Created by wangyong on 2017/4/15.
+  Copyright © 2017年 wyong.developer. All rights reserved.
+*/
+
+CFBundleDisplayName = "ResignIPA";

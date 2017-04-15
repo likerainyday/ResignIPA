@@ -1,0 +1,84 @@
+
+/* Class = "NSTextFieldCell"; title = "Bundle Version"; ObjectID = "0Am-35-193"; */
+"0Am-35-193.title" = "Bundle Version";
+
+/* Class = "NSMenuItem"; title = "Resign IPA"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Resign IPA";
+
+/* Class = "NSTextFieldCell"; title = "Configuration"; ObjectID = "3PC-0U-ydW"; */
+"3PC-0U-ydW.title" = "Configuration";
+
+/* Class = "NSMenuItem"; title = "Quit Resign IPA"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit Resign IPA";
+
+/* Class = "NSMenuItem"; title = "About Resign IPA"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About Resign IPA";
+
+/* Class = "NSButtonCell"; title = "Open"; ObjectID = "7ou-Us-kXl"; */
+"7ou-Us-kXl.title" = "Open";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "Resign IPA Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Resign IPA Help";
+
+/* Class = "NSWindow"; title = "Resign IPA"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "Resign IPA";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSTextFieldCell"; title = "IPA File Path"; ObjectID = "NRf-EM-C2B"; */
+"NRf-EM-C2B.title" = "IPA File Path";
+
+/* Class = "NSMenuItem"; title = "Hide Resign IPA"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide Resign IPA";
+
+/* Class = "NSTextFieldCell"; title = "Provisioning Profile"; ObjectID = "Phg-pI-MYF"; */
+"Phg-pI-MYF.title" = "Provisioning Profile";
+
+/* Class = "NSComboBoxCell"; placeholderString = "Select a Signing Provisioning Profiles"; ObjectID = "Svk-NB-oyK"; */
+"Svk-NB-oyK.placeholderString" = "Select a Signing Provisioning Profiles";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSTextFieldCell"; title = "Certificate"; ObjectID = "Z7r-py-ryF"; */
+"Z7r-py-ryF.title" = "Certificate";
+
+/* Class = "NSTextFieldCell"; title = "App Display Name"; ObjectID = "ZkI-TR-3mm"; */
+"ZkI-TR-3mm.title" = "App Display Name";
+
+/* Class = "NSButtonCell"; title = "Resign"; ObjectID = "aOg-Wk-OuM"; */
+"aOg-Wk-OuM.title" = "Resign";
+
+/* Class = "NSTextFieldCell"; title = "Bundle Identifier"; ObjectID = "f0i-7N-dud"; */
+"f0i-7N-dud.title" = "Bundle Identifier";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSComboBoxCell"; placeholderString = "Select a Signing Certificate"; ObjectID = "o8D-s6-rGn"; */
+"o8D-s6-rGn.placeholderString" = "Select a Signing Certificate";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Drag/Browse/Input IPA File Path"; ObjectID = "rq9-ej-kwb"; */
+"rq9-ej-kwb.placeholderString" = "Drag/Browse/Input IPA File Path";
+
+/* Class = "NSTextFieldCell"; title = "App Version"; ObjectID = "s9s-sD-lFo"; */
+"s9s-sD-lFo.title" = "App Version";
+
+/* Class = "NSMenu"; title = "Resign IPA"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Resign IPA";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Help";
