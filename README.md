@@ -1,1 +1,1 @@
-### IPA Resign for macOS
+### IPA Resign for macOS（IPA包重签名）
