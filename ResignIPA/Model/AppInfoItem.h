@@ -20,6 +20,8 @@
 
 @property(copy) NSString *bundleVersion;
 
+@property(copy) NSString *deploymentTarget;
+
 @property(copy) NSString *originalFilePath;
 
 @property(copy) NSString *tempWorkspace;

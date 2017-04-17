@@ -82,12 +82,12 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     NSString *fileType =[filePath pathExtension].lowercaseString;
     if (![@"ipa" isEqualToString:fileType]) {
        [ResignManager manager]->_originalItem = nil;
-        return @"not a ipa file";
+        return @"kInvalidIPAFileAlert";
     }
     NSFileManager *fileManager =[NSFileManager defaultManager];
     if (![fileManager fileExistsAtPath:filePath]) {
         [ResignManager manager]->_originalItem = nil;
-        return @"ipa file not exist";
+        return @"kIPAFileUnexistAlert";
     }
     NSString *tempWorkspace = [NSTemporaryDirectory() stringByAppendingString:[[NSBundle mainBundle]bundleIdentifier]];
     if ([fileManager fileExistsAtPath:tempWorkspace]) {
@@ -130,6 +130,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
                 item.bundleId =[dict objectForKey:@"CFBundleIdentifier"];
                 item.version =[dict objectForKey:@"CFBundleShortVersionString"];
                 item.bundleVersion =[dict objectForKey:@"CFBundleVersion"];
+                item.deploymentTarget =[dict objectForKey:@"MinimumOSVersion"];
                 [ResignManager manager]->_originalItem =item;
                 callback(item);
                 break;
@@ -146,12 +147,12 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     ResignManager *manager =[ResignManager manager];
     NSString *workspacePath =manager.originalItem.tempWorkspace;
     if (workspacePath==nil || workspacePath.length==0) {
-        callback(@"Unzip file not find");
+        callback(@"kUnzipFileUnexist");
         return;
     }
     NSString *infoPlistPath =manager.originalItem.tempInfoPlistPath;
     if (infoPlistPath==nil || infoPlistPath.length==0) {
-        callback(@"Info.plist file not find");
+        callback(@"kInfoPlistUnexist");
         return;
     }
     NSString *appPath =manager.originalItem.tempAppFilePath;
@@ -159,7 +160,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     //create entitlements.plist file
     NSString *profilePath =[item.profile filePath];
     if (![[NSFileManager defaultManager] fileExistsAtPath:profilePath]) {
-        callback(@"provisioning profile not find");
+        callback(@"kProfileUnexist");
         return;
     }
     [self.class executeTask:kSecurityPath arguments:@[@"cms", @"-D", @"-i", profilePath] currentPath:nil completion:^(NSString *result) {
@@ -175,6 +176,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
             NSString *eltFilePath = [workspacePath stringByAppendingPathComponent:kEntitlementsFileName];
             [entitlementsDict writeToFile:eltFilePath atomically:YES];
         }
+        callback(@"kCreateEntitlementsFile");
         dispatch_semaphore_signal(semaphore);
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
@@ -197,7 +199,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     if (executableFileName==nil) {
-        callback(@"ExecutableFile not find");
+        callback(@"kExecutableFileUnexist");
         return;
     }
     NSString *executableFilePath =[appPath stringByAppendingPathComponent:executableFileName];
@@ -211,6 +213,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
         [self.class executeTask:kDefaultsPath arguments:@[@"write", infoPlistPath, @"CFBundleIdentifier", item.bundleId] currentPath:nil completion:^(NSString *result) {
             dispatch_semaphore_signal(semaphore);
         }];
+        callback(@"kWriteBundleId");
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     }
     //writeAppName
@@ -218,6 +221,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
         [self.class executeTask:kDefaultsPath arguments:@[@"write", infoPlistPath, @"CFBundleDisplayName", item.name] currentPath:nil completion:^(NSString *result) {
             dispatch_semaphore_signal(semaphore);
         }];
+        callback(@"kWriteAppName");
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     }
     //writeAppVersion
@@ -225,6 +229,15 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
         [self.class executeTask:kDefaultsPath arguments:@[@"write", infoPlistPath, @"CFBundleShortVersionString", item.version] currentPath:nil completion:^(NSString *result) {
             dispatch_semaphore_signal(semaphore);
         }];
+        callback(@"kWriteAppVersion");
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    }
+    //writeDeploymentTarget
+    if (item.deploymentTarget.length>0) {
+        [self.class executeTask:kDefaultsPath arguments:@[@"write", infoPlistPath, @"MinimumOSVersion", item.deploymentTarget] currentPath:nil completion:^(NSString *result) {
+            dispatch_semaphore_signal(semaphore);
+        }];
+        callback(@"kWriteDeploymentTarget");
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     }
     //writeBundleVersion
@@ -232,6 +245,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
         [self.class executeTask:kDefaultsPath arguments:@[@"write", infoPlistPath, @"CFBundleVersion", item.bundleVersion] currentPath:nil completion:^(NSString *result) {
             dispatch_semaphore_signal(semaphore);
         }];
+        callback(@"kWriteBundleVersion");
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     }
     NSString *certName =item.certificate.name;
@@ -241,6 +255,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     [self.class executeTask:kCodesignPath arguments:@[@"-vvv", @"-fs", certName, @"--no-strict", entString, appPath] currentPath:nil completion:^(NSString *result) {
         dispatch_semaphore_signal(semaphore);
     }];
+    callback(@"kResignIPA");
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     //create new ipa file
     NSString *originalFilePath =[manager.originalItem.originalFilePath stringByDeletingLastPathComponent];
@@ -253,7 +268,8 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     //open file path
     NSString *folderPath =[manager.originalItem.originalFilePath stringByDeletingLastPathComponent];
-    [ResignManager  executeTask:kOpenPath arguments:@[folderPath] currentPath:nil completion:nil];
+    [ResignManager executeTask:kOpenPath arguments:@[folderPath] currentPath:nil completion:nil];
+    callback(@"KResignSuccess");
 }
 
 #pragma mark -Task

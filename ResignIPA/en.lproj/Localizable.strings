@@ -1,0 +1,53 @@
+/* 
+  InfoPlist.strings
+  Resign IPA
+
+  Created by wangyong on 2017/4/15.
+  Copyright © 2017年 wyong.developer. All rights reserved.
+*/
+
+CFBundleDisplayName = "ResignIPA";
+
+"kWelcomeString" ="Welcome to use ResignIPA";
+
+"kLoadCertificates" ="Start load certificates on this Mac ...";
+
+"kLoadProfiles" ="Start load provisioning profiles on this Mac ...";
+
+"kDidLoadCertificates" ="Certificates did load";
+
+"kDidLoadProfiles" ="Provisioning profiles did load";
+
+"KAnalysisSuccess" ="Analysis IPA file succeed";
+
+"kInvalidIPAFileAlert" ="Invalid Ipa File, please check.";
+
+"kIPAFileUnexistAlert" ="Ipa File not find, please check.";
+
+"kCertificateAlert" ="Please Select a available certificate";
+
+"kProfileAlert" ="Please Select a available profile";
+
+"kUnzipFileUnexist" ="Unzip file not find, please check.";
+
+"kInfoPlistUnexist" ="Info.plist file not find from unzip app file";
+
+"kProfileUnexist" ="Provisioning profile not find on this Mac";
+
+"kExecutableFileUnexist" ="ExecutableFile not find from unzip app file";
+
+"kCreateEntitlementsFile" ="Create entitlements.plist ...";
+
+"kWriteBundleId" ="Write bundle identifier";
+
+"kWriteAppName" ="Write app name";
+
+"kWriteAppVersion" ="Write app version";
+
+"kWriteDeploymentTarget" ="Write MinimumOSVersion";
+
+"kWriteBundleVersion" ="Write bundle version";
+
+"kResignIPA" ="Start resign ...";
+
+"KResignSuccess" ="Resign IPA file succeed";

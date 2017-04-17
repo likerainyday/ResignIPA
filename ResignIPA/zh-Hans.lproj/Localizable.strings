@@ -1,0 +1,53 @@
+/* 
+  InfoPlist.strings
+  Resign IPA
+
+  Created by wangyong on 2017/4/15.
+  Copyright © 2017年 wyong.developer. All rights reserved.
+*/
+
+CFBundleDisplayName = "IPA重签名";
+
+"kWelcomeString" ="欢迎使用\"IPA重签名\"";
+
+"kLoadCertificates" ="开始加载Mac上的证书文件...";
+
+"kLoadProfiles" ="开始加载Mac上的配置文件...";
+
+"kDidLoadCertificates" ="证书文件加载完成";
+
+"kDidLoadProfiles" ="配置文件加载完成";
+
+"KAnalysisSuccess" ="选中的IPA文件分析完成";
+
+"kInvalidIPAFileAlert" ="无效的IPA的文件路径，请重新确定文件路径";
+
+"kIPAFileUnexistAlert" ="未找到对应的IPA文件，请重新确定文件路径";
+
+"kCertificateAlert" ="请选择一个可用的证书";
+
+"kProfileAlert" ="请选择一个可用的配置文件";
+
+"kUnzipFileUnexist" ="未找到解压后的文件，请重试";
+
+"kInfoPlistUnexist" ="未从解压IPA文件中找到Info.plist文件";
+
+"kProfileUnexist" ="未找到选择的配置文件";
+
+"kExecutableFileUnexist" ="未从解压IPA文件中找到执行文件";
+
+"kCreateEntitlementsFile" ="创建entitlements.plist...";
+
+"kWriteBundleId" ="写入应用标识";
+
+"kWriteAppName" ="写入应用名称";
+
+"kWriteAppVersion" ="写入应用版本号";
+
+"kWriteDeploymentTarget" ="写入最低兼容版本号";
+
+"kWriteBundleVersion" ="写入应用包版本号";
+
+"kResignIPA" ="开始重签名...";
+
+"KResignSuccess" ="重签名完成";

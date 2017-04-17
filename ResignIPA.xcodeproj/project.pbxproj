@@ -10,7 +10,7 @@
 		8E0CBDDC1EA2685D00B3FF16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC41EA2685D00B3FF16 /* AppDelegate.m */; };
 		8E0CBDDD1EA2685D00B3FF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC51EA2685D00B3FF16 /* Assets.xcassets */; };
 		8E0CBDDE1EA2685D00B3FF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC61EA2685D00B3FF16 /* Main.storyboard */; };
-		8E0CBDDF1EA2685D00B3FF16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC81EA2685D00B3FF16 /* InfoPlist.strings */; };
+		8E0CBDDF1EA2685D00B3FF16 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDC81EA2685D00B3FF16 /* Localizable.strings */; };
 		8E0CBDE11EA2685D00B3FF16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E0CBDCC1EA2685D00B3FF16 /* Info.plist */; };
 		8E0CBDE21EA2685D00B3FF16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDCD1EA2685D00B3FF16 /* main.m */; };
 		8E0CBDE31EA2685D00B3FF16 /* ResignManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBDD01EA2685D00B3FF16 /* ResignManager.m */; };
@@ -25,7 +25,7 @@
 		8E0CBDC41EA2685D00B3FF16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8E0CBDC51EA2685D00B3FF16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0CBDC71EA2685D00B3FF16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E0CBDC91EA2685D00B3FF16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E0CBDC91EA2685D00B3FF16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8E0CBDCC1EA2685D00B3FF16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E0CBDCD1EA2685D00B3FF16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E0CBDCF1EA2685D00B3FF16 /* ResignManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResignManager.h; sourceTree = "<group>"; };
@@ -38,7 +38,9 @@
 		8E0CBDD71EA2685D00B3FF16 /* ProvisioningProfileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvisioningProfileItem.m; sourceTree = "<group>"; };
 		8E0CBDD81EA2685D00B3FF16 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8E0CBDD91EA2685D00B3FF16 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8E0CBDDA1EA2685D00B3FF16 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8E0CBDDA1EA2685D00B3FF16 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8E1D5FA21EA273710045D724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		8E1D5FA51EA273A00045D724 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		8E29CB361E9F148F006D411C /* ResignIPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResignIPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,7 +98,7 @@
 			children = (
 				8E0CBDCD1EA2685D00B3FF16 /* main.m */,
 				8E0CBDCC1EA2685D00B3FF16 /* Info.plist */,
-				8E0CBDC81EA2685D00B3FF16 /* InfoPlist.strings */,
+				8E0CBDC81EA2685D00B3FF16 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0CBDDD1EA2685D00B3FF16 /* Assets.xcassets in Resources */,
-				8E0CBDDF1EA2685D00B3FF16 /* InfoPlist.strings in Resources */,
+				8E0CBDDF1EA2685D00B3FF16 /* Localizable.strings in Resources */,
 				8E0CBDE11EA2685D00B3FF16 /* Info.plist in Resources */,
 				8E0CBDDE1EA2685D00B3FF16 /* Main.storyboard in Resources */,
 			);
@@ -213,17 +215,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				8E0CBDC71EA2685D00B3FF16 /* Base */,
+				8E1D5FA21EA273710045D724 /* en */,
+				8E1D5FA51EA273A00045D724 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8E0CBDC81EA2685D00B3FF16 /* InfoPlist.strings */ = {
+		8E0CBDC81EA2685D00B3FF16 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8E0CBDC91EA2685D00B3FF16 /* en */,
 				8E0CBDDA1EA2685D00B3FF16 /* zh-Hans */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
