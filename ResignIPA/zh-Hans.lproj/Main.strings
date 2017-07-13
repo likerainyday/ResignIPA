@@ -75,7 +75,7 @@
 "o8D-s6-rGn.placeholderString" = "请选择一个证书";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Drag/Browse/Input IPA File Path"; ObjectID = "rq9-ej-kwb"; */
-"rq9-ej-kwb.placeholderString" = "拖/打开/输入IPA文件路径";
+"rq9-ej-kwb.placeholderString" = "打开/输入IPA文件路径";
 
 /* Class = "NSTextFieldCell"; title = "AppVersion"; ObjectID = "s9s-sD-lFo"; */
 "s9s-sD-lFo.title" = "应用版本";

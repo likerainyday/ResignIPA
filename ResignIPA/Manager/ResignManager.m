@@ -99,7 +99,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     }else{
         [fileManager createDirectoryAtPath:tempWorkspace withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     [self.class executeTask:kUnzipPath arguments:@[@"-q", filePath, @"-d", tempWorkspace] currentPath:nil completion:^(NSString *result) {
         NSString *payloadPath =[tempWorkspace stringByAppendingPathComponent:@"Payload"];
         NSArray *subFiles = [fileManager contentsOfDirectoryAtPath:payloadPath error:nil];
@@ -136,9 +136,9 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
                 break;
             }
         }
-        dispatch_semaphore_signal(semaphore);
+//        dispatch_semaphore_signal(semaphore);
     }];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     return nil;
 }
 

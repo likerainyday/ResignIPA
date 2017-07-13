@@ -75,7 +75,7 @@
 "o8D-s6-rGn.placeholderString" = "Select a Signing Certificate";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Drag/Browse/Input IPA File Path"; ObjectID = "rq9-ej-kwb"; */
-"rq9-ej-kwb.placeholderString" = "Drag/Browse/Input IPA File Path";
+"rq9-ej-kwb.placeholderString" = "Browse/Input IPA File Path";
 
 /* Class = "NSTextFieldCell"; title = "AppVersion"; ObjectID = "s9s-sD-lFo"; */
 "s9s-sD-lFo.title" = "AppVersion";
