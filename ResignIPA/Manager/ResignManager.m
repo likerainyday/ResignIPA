@@ -51,7 +51,10 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
         NSArray *components = [result componentsSeparatedByString:@"\n"];
         for (NSString *string in components) {
             CertificateItem *item =[[CertificateItem alloc]initWithString:string];
-            if (item.name) {
+            if(item.name==nil || item.sha1==nil){
+                continue;
+            }
+            if(![certificates containsObject:item]){
                 [certificates addObject:item];
             }
         }
@@ -145,6 +148,8 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
 +(void)resignIPA:(AppInfoItem *)item completion:(void(^)(NSString *message))callback{
 
     ResignManager *manager =[ResignManager manager];
+    NSFileManager *fileManager =[NSFileManager defaultManager];
+    
     NSString *workspacePath =manager.originalItem.tempWorkspace;
     if (workspacePath==nil || workspacePath.length==0) {
         callback(@"kUnzipFileUnexist");
@@ -156,10 +161,20 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
         return;
     }
     NSString *appPath =manager.originalItem.tempAppFilePath;
+    NSString *appBundleProvisioningFilePath =[appPath stringByAppendingPathComponent:@"embedded.mobileprovision"];
+    if ([fileManager fileExistsAtPath:appBundleProvisioningFilePath]) {
+       BOOL success =[fileManager removeItemAtPath:appBundleProvisioningFilePath error:nil];
+        if (success) {
+            //replace embedded.mobileprovision
+            [fileManager copyItemAtPath:item.profile.filePath toPath:appBundleProvisioningFilePath error:nil];
+        }
+    }
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    //temp entitlements.plist file path
+    NSString *entitlementsFilePath = [workspacePath stringByAppendingPathComponent:kEntitlementsFileName];
     //create entitlements.plist file
     NSString *profilePath =[item.profile filePath];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:profilePath]) {
+    if (![fileManager fileExistsAtPath:profilePath]) {
         callback(@"kProfileUnexist");
         return;
     }
@@ -173,8 +188,7 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
         //get Entitlements dictionary
         NSDictionary *entitlementsDict =[plistDic objectForKey:@"Entitlements"];
         if (entitlementsDict) {
-            NSString *eltFilePath = [workspacePath stringByAppendingPathComponent:kEntitlementsFileName];
-            [entitlementsDict writeToFile:eltFilePath atomically:YES];
+            [entitlementsDict writeToFile:entitlementsFilePath atomically:YES];
         }
         callback(@"kCreateEntitlementsFile");
         dispatch_semaphore_signal(semaphore);
@@ -257,6 +271,8 @@ static NSString *const kProvisioningProfileFilePath = @"Library/MobileDevice/Pro
     }];
     callback(@"kResignIPA");
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    //remove temp entitlements.plist
+    [fileManager removeItemAtPath:entitlementsFilePath error:nil];
     //create new ipa file
     NSString *originalFilePath =[manager.originalItem.originalFilePath stringByDeletingLastPathComponent];
     NSString *originalFileName =[[manager.originalItem.originalFilePath lastPathComponent] stringByDeletingPathExtension];

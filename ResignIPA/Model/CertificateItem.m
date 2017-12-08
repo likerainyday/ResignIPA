@@ -10,6 +10,20 @@
 
 @implementation CertificateItem
 
+-(BOOL)isEqual:(id)object{
+    
+    BOOL isEqual =NO;
+    CertificateItem *item =object;
+    
+    if (item !=nil && [item isKindOfClass:[CertificateItem class]]) {
+        if ([item.sha1 isEqualToString:self.sha1]) {
+            isEqual =YES;
+        }
+    }
+    return isEqual;
+}
+
+
 -(instancetype)initWithString:(NSString *)tempString{
     if (self=[super init]) {
         //start at fisrt ')'
